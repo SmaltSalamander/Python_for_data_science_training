@@ -1,10 +1,10 @@
 def NULL_not_found(object: any) -> int:
-    
+
     if object is None:
         name = "Nothing"
     elif object != object:
         name = "Cheese"
-    elif object == False:
+    elif object is False:
         name = "Fake"
     elif object == 0:
         name = "Zero"

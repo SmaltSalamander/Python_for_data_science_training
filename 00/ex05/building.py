@@ -32,6 +32,5 @@ def main():
         print(f"{e.__class__.__name__}: {e}")
 
 
-
 if __name__ == "__main__":
     main()

@@ -7,7 +7,7 @@ def main():
         if len(arglist) == 1:
             return
         if len(arglist) > 2:
-                raise AssertionError("more than one argument is provided")
+            raise AssertionError("more than one argument is provided")
         try:
             number = int(arglist[1])
         except ValueError:
@@ -21,7 +21,6 @@ def main():
     except AssertionError as e:
         print(f"{e.__class__.__name__}: {e}")
         return
-
 
 
 if __name__ == "__main__":
