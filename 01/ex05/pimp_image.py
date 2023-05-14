@@ -28,17 +28,15 @@ def ft_blue(array) -> np.array:
 
 def ft_grey(array) -> np.array:
     max_rgb = np.amax(array)
-    gray_img = np.array([[max(array[i,j,:]) / max_rgb 
-                         for j in range(array.shape[1])]
-                         for i in range(array.shape[0])])
+    gray_img = np.array(np.max(array, axis=2) / max_rgb)
     return gray_img
 
 
 def main():
     landscape = ft_load("landscape.jpg")
     ft_grey(landscape)
-    # plt.imshow(ft_grey(landscape), cmap='gray')
-    plt.imshow(ft_invert(landscape))
+    plt.imshow(ft_grey(landscape), cmap='gray')
+    # plt.imshow(ft_invert(landscape))
 
 if __name__ == "__main__":
     main()
